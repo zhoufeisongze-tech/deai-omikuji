@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#8f2641" />
+    <meta name="description" content="今日の出会い運を占う、スマートフォン向けのおみくじです。" />
+    <title>今日の出会い運｜おみくじ</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" aria-label="おみくじ">
+        <span class="site-header__mark" aria-hidden="true">縁</span>
+        <span class="site-header__name">OMIKUJI</span>
+      </header>
+
+      <main>
+        <section class="fortune-card" aria-labelledby="page-title">
+          <div class="fortune-card__pattern" aria-hidden="true"></div>
+
+          <div id="intro-view" class="view view--intro">
+            <p class="eyebrow">一夜一会のおみくじ</p>
+            <h1 id="page-title">今日の<br /><span>出会い運</span></h1>
+            <p class="lead">
+              今夜のご縁は、どんな予感？<br />
+              心を決めたら、そっと引いてください。
+            </p>
+
+            <div class="omikuji-visual" aria-hidden="true">
+              <span class="omikuji-visual__cord"></span>
+              <span class="omikuji-visual__paper">恋<br />み<br />く<br />じ</span>
+            </div>
+
+            <button id="draw-button" class="primary-button" type="button">
+              <span>おみくじを引く</span>
+              <span class="primary-button__arrow" aria-hidden="true">→</span>
+            </button>
+            <p class="microcopy">結果は引いてからのお楽しみ</p>
+          </div>
+
+          <div id="result-view" class="view view--result" hidden aria-live="polite" tabindex="-1">
+            <p class="eyebrow">本日の出会い運</p>
+            <div class="result-seal" aria-hidden="true">
+              <span id="result-kanji">大吉</span>
+            </div>
+            <p id="result-label" class="result-label">DAIKICHI</p>
+            <p id="result-comment" class="result-comment"></p>
+            <div class="result-divider" aria-hidden="true"><span>✦</span></div>
+
+            <p class="line-intro">このご縁、もう少しだけ続けませんか？</p>
+            <a id="line-button" class="line-button" rel="noopener noreferrer">
+              <span class="line-button__icon" aria-hidden="true">LINE</span>
+              <span id="line-button-text">LINEで友だち追加</span>
+            </a>
+            <p id="line-status" class="line-status" hidden>
+              LINEリンクはただいま準備中です
+            </p>
+
+            <button id="retry-button" class="text-button" type="button">
+              もう一度引く
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>GOOD LUCK, GOOD MEETING.</p>
+      </footer>
+    </div>
+
+    <div id="confetti" class="confetti" aria-hidden="true"></div>
+
+    <noscript>
+      <div class="noscript-message">
+        このおみくじを引くには、ブラウザのJavaScriptを有効にしてください。
+      </div>
+    </noscript>
+  </body>
+</html>

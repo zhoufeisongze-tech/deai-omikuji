@@ -139,6 +139,49 @@ main {
   animation: view-in 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.opening-message {
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 23px;
+}
+
+.opening-message::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+  transform: translateX(-50%);
+}
+
+.opening-message__question {
+  margin: 0;
+  font-size: clamp(22px, 6vw, 28px);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: 0.025em;
+}
+
+.opening-message__question span {
+  color: var(--wine);
+  font-size: 1.12em;
+  font-weight: 600;
+}
+
+.opening-message__description {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: clamp(12px, 3.1vw, 13px);
+  line-height: 1.9;
+}
+
+.opening-message__description span {
+  display: block;
+}
+
 .eyebrow {
   margin: 0 0 18px;
   color: var(--gold);
@@ -150,7 +193,7 @@ main {
 h1 {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(42px, 12vw, 64px);
+  font-size: clamp(38px, 10vw, 52px);
   font-weight: 500;
   line-height: 1.13;
   letter-spacing: 0.06em;
@@ -160,18 +203,11 @@ h1 span {
   color: var(--wine);
 }
 
-.lead {
-  margin: 20px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 2;
-}
-
 .omikuji-visual {
   position: relative;
   width: 90px;
-  height: 142px;
-  margin: 25px auto 22px;
+  height: 112px;
+  margin: 20px auto 22px;
   transform: rotate(3deg);
 }
 
@@ -215,7 +251,7 @@ h1 span {
   top: -4px;
   right: 0;
   width: 16px;
-  height: 125px;
+  height: 98px;
   border-right: 2px solid var(--wine-soft);
   border-radius: 50%;
   transform: rotate(9deg);
@@ -481,7 +517,7 @@ footer p {
   }
 
   .omikuji-visual {
-    height: 112px;
+    height: 100px;
     margin: 18px auto;
   }
 
@@ -491,7 +527,7 @@ footer p {
   }
 
   .omikuji-visual__cord {
-    height: 98px;
+    height: 88px;
   }
 }
 
